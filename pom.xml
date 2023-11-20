@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>84</groupId>
+    <artifactId>749</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+    <build>
+    <plugins>
+        <!-- PMD plugin configuration -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-pmd-plugin</artifactId>
+            <version>3.15.0</version> <!-- Use the latest version -->
+            <configuration>
+                <linkXRef>false</linkXRef>
+                <sourceEncoding>UTF-8</sourceEncoding>
+                <minimumTokens>100</minimumTokens> <!-- Example configuration, adjust as needed -->
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>verify</phase> <!-- Run PMD during the verify phase -->
+                    <goals>
+                        <goal>pmd</goal>
+                        <goal>cpd</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        <!-- Other plugins -->
+    </plugins>
+</build>
+
+    <!-- Other dependencies if needed -->
+</project>
